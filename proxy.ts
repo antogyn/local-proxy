@@ -10,7 +10,7 @@ async function start() {
   if (!flags.port || !flags.target) {
     console.log("Missing --port and/or --target options");
     console.log(
-      `Example: deno run --allow-net proxy.ts --port=3000 --target=https://github.com/oakserver/oak`
+      `Example: deno run --allow-net https://deno.land/x/localproxy/proxy.ts --port=3000 --target=https://github.com/antogyn/local-proxy`
     );
     return;
   }
