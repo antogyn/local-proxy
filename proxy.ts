@@ -17,7 +17,7 @@ async function start() {
 
   const app = new Application();
 
-  app.use(proxy(flags.target));
+  app.use(proxy((ctx) => new URL(flags.target! + ctx.request.url.pathname)));
 
   app.addEventListener("listen", ({ hostname, port, secure }) => {
     console.log(
